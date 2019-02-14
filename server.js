@@ -5,6 +5,8 @@ var cheerio = require("cheerio");
 var path = require("path");
 var app = express();
 
+var PORT = process.env.PORT ||8080;
+
 var databaseUrl = "newsScraper";
 var collections = ["scrapedNews"];
 
@@ -104,6 +106,6 @@ app.put("/api/article/:id", function (req, res) {
     });
 });
 
-app.listen(8080, function () {
+app.listen(PORT, function () {
     console.log("App running on port 8080!");
 });
