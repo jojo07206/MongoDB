@@ -7,7 +7,7 @@ var app = express();
 
 var PORT = process.env.PORT ||8080;
 
-var databaseUrl = "mongodb://heroku_k92f4754:qdsffipnd8nsquo5m3ol2uurp6@ds335275.mlab.com:35275/heroku_k92f4754";
+var databaseUrl = process.env.MONGOLAB_URI;;
 var collections = ["scrapedNews"];
 
 var db = mongojs(databaseUrl, collections);
